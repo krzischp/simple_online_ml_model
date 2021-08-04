@@ -1,4 +1,4 @@
-# Packging your application
+# Packaging your application
 
 
 ### Build your docker image
