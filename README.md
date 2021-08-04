@@ -1,3 +1,8 @@
+*This project uses the following Docker image:*  
+https://hub.docker.com/r/tiangolo/uvicorn-gunicorn-fastapi  
+
+
+
 # Packaging your application
 
 
