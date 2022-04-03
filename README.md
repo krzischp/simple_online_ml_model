@@ -9,19 +9,19 @@ https://hub.docker.com/r/tiangolo/uvicorn-gunicorn-fastapi
 ### Build your docker image
 
 ```
-sudo docker build -t xgb-rest-predictor .
+docker build -t krzischp/xgb-rest-predictor:sample .
 ```
 
 ### Run your docker image
 
 ```
-sudo docker run -d --name xgb -p 80:80 xgb-rest-predictor 
+docker run -d --name xgb -p 80:80 krzischp/xgb-rest-predictor:sample 
 ```
 
 ### Check your container logs
 
 ```
-sudo docker logs xgb 
+docker logs xgb 
 ```
 
 ### Test your service
@@ -37,3 +37,9 @@ curl -X 'POST' \
   ]
 }'
 ```
+
+Once your container is running, you can also see the [automatic interactive API documentation](http://127.0.0.1/docs#/default/dispatch_predictions_predictions_post) (provided by Swagger UI) and test the application.
+
+# Application
+
+With this **API**, you can send the following **Iris** flower dimensions ['sepal length (cm)', 'sepal width (cm)', 'petal length (cm)', 'petal width (cm)'] as a request input, and receive the answer wether the specy is 'setosa' (0), 'versicolor' (1) or 'virginica' (2).
